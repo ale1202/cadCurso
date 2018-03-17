@@ -1,0 +1,97 @@
+*{
+  margin:0;
+  padding:0;
+}
+
+  #html, #body {
+  height: 100%;
+}
+
+#topo{
+  font-size: 30px;
+  padding: 20px;
+  width: 100%; /*largura*/
+  height: 50px; /*altura*/
+  text-align: center; /*alinhamento do texto*/
+  clear: both; /*não permite elementos flutuantes ao lado*/
+  background-color: #CECEF6; /*cor de fundo*/
+}
+
+#menu{
+font-size: 30px;
+font-weight:bold;	
+  width: 100%; /*largura*/
+  text-align: center; /*alinhamento do texto*/
+  padding: 10px; /*espaço entre a borda e o conteúdo do elemento*/
+  background-color: #CEF6D8; /*cor de fundo*/
+  
+}
+
+  #menu1{
+font-size: 25px;
+font-weight:bold;	
+  width: 100%; /*largura*/
+  text-align: center; /*alinhamento do texto*/
+  padding: 20px; /*espaço entre a borda e o conteúdo do elemento*/
+  background-color: #CEF6D8; /*cor de fundo*/
+  
+}
+
+#bod{
+  text-align: center; /*alinhamento do texto*/
+  padding: 0px; /*espaço entre a borda e o conteúdo */
+  width: 100%; /*largura*/
+  height:50%;
+  background-color: #CEF6D8;
+  margin:0px; /*espaço entre a borda e os elementos externos*/
+}
+
+#bod1{
+  text-align: center; /*alinhamento do texto*/
+  padding: 25px; /*espaço entre a borda e o conteúdo */
+  width: 100%; /*largura*/
+  height:50%;
+  background-color: #CECEF6;
+  padding:0px; /*espaço entre a borda e o conteúdo do elemento*/
+  margin:0px; /*espaço entre a borda e os elementos externos*/
+}
+
+#meio{
+font-size: 25px;
+  text-align: center;
+  width: 100%; /*largura*/
+  height: 100%; /*altura*/
+  padding: 50px; /*espaço entre a borda e o conteúdo do elemento*/
+}
+
+#meio1{
+font-size: 20px;  
+  margin-left: 10px;
+  text-align: left;
+  width: 100%; /*largura*/
+  height: 100%; /*altura*/
+  padding: 50px; /*espaço entre a borda e o conteúdo do elemento*/
+}
+
+
+#rodape{
+font-size: 15px;  
+  position: absolute;
+  bottom:0;
+  width:100%;
+  text-align: center; /*alinhamento do texto*/
+  background-color: #CECEF6; /*cor de fundo*/
+}
+
+#rodape1{
+font-size: 15px;  
+  position: absolute;
+  bottom:0;
+  width:100%;
+  text-align: center; /*alinhamento do texto*/
+  background-color: #CEF6D8; /*cor de fundo*/
+}
+
+a {
+  color: rgb(0, 0, 0);
+}

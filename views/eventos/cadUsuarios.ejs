@@ -1,0 +1,52 @@
+!DOCTYPE HTML>
+<html = "pt">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Cadastro de Usuarios</title>
+            <link rel='stylesheet' href='style.css'/>
+    </head>
+    <body id="bod1">
+
+		<header id="topo">
+			<h2>Sistema para Cadastro de Cursos</h2>
+		</header><hr>
+        
+		<nav id="menu1">
+        	<p> Cadastro de Usuários <p> 
+        </nav>
+        <hr>
+        <section id="meio1">
+            <form action="/login" method="POST">
+   
+                <p>Nome do Usuário:</p>    
+                <input type="text" style = "width:400px" name="nomeUsuario" placeholder="Nome do Usuário">
+                <br/><br>
+                
+                <p>Senha:</p>    
+                <input type="password" style="height: 20px" name="usuario[senha]" placeholder="Senha">
+                <br/><br>
+                
+                <p>Confirmar Senha:</p>
+	
+                <input type="password" style="height: 20px" name="usuario[confirma]" placeholder="Senha">
+                <br/><br/>
+                    
+                 <input type='submit' value='Confirmar Dados' style='width: 130px'>
+                <br><br>
+                <a href="/menu"> Voltar à Página Principal sem Salvar </a>
+                <br/>
+                    
+            </form>
+        </section>
+        
+		<footer id="rodape1">
+			<hr>
+			<p center> Copyright & Copy 2018 - By Alexandre </p>
+			<a href="https://www.Fiap.com.br" target="_blank">Fiap</a> |
+			<a href="https://www.linkedin.com/"target="_blank">Linkedin</a>
+			</p>
+		</footer>
+
+    </body>
+</html> 

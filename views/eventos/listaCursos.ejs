@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html = "pt">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Cadastro de Cursos</title>
+            <link rel='stylesheet' href='style.css'/>
+    </head>
+    <body id="bod1">
+
+		<header id="topo">
+			<h2>Sistema para Cadastro de Cursos</h2>
+		</header><hr>
+        
+		<form id="menu1">
+        	<p> Lista de Cursos<p> 
+        </form>
+        
+        <hr>
+        <section id="meio1">
+           <table>
+               <thead>
+                   <th>Código</th>
+				   <th>**</th>
+                   <th>Descrição</th>
+				   <th>**</th>
+                   <th>Carga Horária</th>
+				   <th>**</th>
+                   <th>Categoria</th>
+               </thead>
+           </table>
+
+           <tbody>
+               <% cursos.forEach(function(curso, index) { %>
+                <tr>
+                    <td>
+                        <%= curso.descricao %>
+                    </td>
+                    <td>
+                        <%= curso.cargaHora %>
+                    </td>
+                    <td>
+                        <%= curso.categoria %>
+                    </td>
+                </tr>
+                <%})%>
+           </tbody>
+        </section>
+
+        <section>
+            <a href='/menu'>Voltar ao Menu</a>
+        </section>
+        
+		<footer id="rodape1">
+			<hr>
+			<p center> Copyright & Copy 2018 - By Alexandre </p>
+			<a href="https://www.Fiap.com.br" target="_blank">Fiap</a> |
+			<a href="https://www.linkedin.com/"target="_blank">Linkedin</a></p>
+		</footer>
+
+    </body>
+</html>
