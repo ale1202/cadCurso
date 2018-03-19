@@ -56,6 +56,16 @@ font-weight:bold;
   margin:0px; /*espaço entre a borda e os elementos externos*/
 }
 
+#erro{
+  text-align: center; /*alinhamento do texto*/
+  padding: 60px; /*espaço entre a borda e o conteúdo */
+  width: 100%; /*largura*/
+  height:50%;
+  background-color: #CECEF6;
+  padding:0px; /*espaço entre a borda e o conteúdo do elemento*/
+  margin:0px; /*espaço entre a borda e os elementos externos*/
+}
+
 #meio{
 font-size: 25px;
   text-align: center;

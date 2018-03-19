@@ -10,7 +10,8 @@ var error = require('./middlewares/error');
 app=express();
 
 var mongoose = require('mongoose');
-    global.db = mongoose.connect('mongodb://localhost:27017/neventos');
+    global.db = mongoose.connect('mongodb://localhost:27017/cadCursos');
+    
     mongoose.connection.on('connected', function () {
     console.log('=====Conexão estabelecida com sucesso=====');
 });

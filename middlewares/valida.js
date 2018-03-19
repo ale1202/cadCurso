@@ -3,4 +3,4 @@ module.exports = function(request, response, next ){
         return response.redirect('/');
     }
     return next();
-};
+}

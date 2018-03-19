@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Cadastro de Cursos</title>
-            <link rel='stylesheet' href='style.css'/>
+            <link rel='stylesheet' href='/stylesheets/style.css'/>
     </head>
     <body id="bod1">
 
@@ -21,30 +21,31 @@
            <table>
                <thead>
                    <th>Código</th>
-				   <th>**</th>
-                   <th>Descrição</th>
-				   <th>**</th>
-                   <th>Carga Horária</th>
-				   <th>**</th>
-                   <th>Categoria</th>
+				   <th>Descrição</th>
+				   <th>Carga Horária</th>
+				   <th>Categoria</th>
                </thead>
-           </table>
+           
 
            <tbody>
-               <% cursos.forEach(function(curso, index) { %>
+               <% for (var i = 0; i< cursos.length; i++) { %>
                 <tr>
                     <td>
-                        <%= curso.descricao %>
+                        <%= cursos[i].Codigo %>
                     </td>
                     <td>
-                        <%= curso.cargaHora %>
+                        <%= cursos[i].descricao %>
                     </td>
                     <td>
-                        <%= curso.categoria %>
+                        <%= cursos[i].cargahora %>
+                    </td>
+                    <td>
+                        <%= cursos[i].categoria %>
                     </td>
                 </tr>
-                <%})%>
+                <%} %>
            </tbody>
+           </table>
         </section>
 
         <section>

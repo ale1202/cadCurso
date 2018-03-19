@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Cadastro de Cursos</title>
-            <link rel='stylesheet' href='style.css'/>
+            <link rel='stylesheet' href='/stylesheets/style.css'/>
     </head>
     <body id="bod1">
 
@@ -13,28 +13,32 @@
 		</header><hr>
         
 		<nav id="menu">
-        	<p> Cadastro de Curso <p> 
+        	<p> Cadastro de Cursos <p> 
         </nav>
         <hr>
         <section id="meio1">
-            <form action="/login" method="POST">
+            <form action="/cadastroCurso" method="POST">
                 
                 <p>Código do Curso:</p>  
-                <input type="text" style="width: 110px" name="codigo" placeholder="Nome do Curso">
+                <input type="text" style="width: 110px" name="curso[Codigo]" placeholder="Nome do Curso">
                 <br><br>
                 
                 <p>Descrição do Curso:</p>    
-                <input type="text" style="width: 400px" name="descricao" placeholder="Descrição do Curso">
+                <input type="text" style="width: 400px" name="curso[descricao]" placeholder="Descrição do Curso">
                 <br><br>
                 
                 <p>Carga Horária:</p>    
-                <input type="text" style="width: 110px" name="cargahora" placeholder="Carga Horária">
+                <input type="text" style="width: 110px" name="curso[cargahora]" placeholder="Carga Horária">
                 <br><br>
                 
                 <p>Categoria:</p>    
-                <input type="text" style="width: 400px" name="categoria" placeholder="Categoria">
-                <br><br>
-                    
+                <select name="curso[categoria]">
+                    <option value="Desenvolvedor Java">Desenvolvedor Java</option>
+                    <option value="Games"> Games</option>
+                    <option value="Banco de Dados">Banco de Dados</option>
+                    <option value="Desenvolvedor WEB"> Desenvolvedor WEB</option>
+                </select>
+                <br><br>    
                 <button type="submit">Confirmar Dados</button><br><br>
                 <br>
                 <a href="/menu"> Voltar à Página Principal sem Salvar </a>

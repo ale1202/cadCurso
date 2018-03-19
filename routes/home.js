@@ -1,6 +1,6 @@
 module.exports = function (app) {
     var home = app.controllers.home;
         app.get('/', home.index);
-        app.get('/login', home.login);
+        app.post('/login', home.login);
         app.get('/logout', home.logout);
     };

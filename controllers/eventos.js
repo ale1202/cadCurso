@@ -1,5 +1,6 @@
 module.exports = function (app) {
-    var Evento = app.models.eventos;
+    var cursos = app.models.cursos;
+    var usuarios = app.models.usuarios;
 
     var EventosController = {
         menu: function (request, response) {
@@ -7,26 +8,46 @@ module.exports = function (app) {
             response.render('eventos/menu', params);
         },
 
-        cadastroUsuarios: function (request, response) {
-            var usuario = request.session.usuario, params = { usuario: usuario };
-            response.render('eventos/cadUsuario', params);
-        },
-
-        cadastroCursos: function (request, response) {
+        cadCurso: function (request, response) {
             var usuario = request.session.usuario, params = { usuario: usuario };
             response.render('eventos/cadCursos', params);
         },
 
+        cadastroUsuarios: function (request, response) {
+            var usuario = request.session.usuario, params = { usuario: usuario };
+            response.render('eventos/cadUsuarios', params);
+        },
+
+        cadastrarUsuario: function (request, response){
+            var usuario= request.body.usuario;
+            usuarios.create(usuario, function(erro, usuario){
+                if(erro) { 
+                     response.redirect("/");
+                }  else {
+                   response.redirect("/cadUsuario");
+                }
+            });    
+        },
+
+        cadastroCursos: function (request, response) {
+           var curso= request.body.curso;
+           cursos.create(curso, function(erro, curso){
+                if(erro) { 
+                    response.redirect("/");
+                 } else {
+                  response.redirect("/listaCursos");
+                }
+           });
+        },
+
 
         listaCursos: function (request, response) {
-            Cursos.find(function (erro, eventos) {
+            cursos.find(function (erro, cursos) {
                 if (erro) {
                     response.render('/menu');
-                }
-                else {
-                    var usuario = request.session.usuario,
-                        params = { usuario: usuario, cursos: cursos };
-                    response.render('eventos/listaCursos', params);
+                } else {
+                   var lista={cursos:cursos};
+                    response.render('eventos/listaCursos',lista);
                 }
             });
         },
@@ -34,30 +55,8 @@ module.exports = function (app) {
         logout: function(request,resposen) {
             request.session.destroy();
             response.redirect('/');
-        },
-
-        //CADASTRO
-
-        novoCurso: function (request, response) {
-            var descricao = request.body.curso.descricao;
-            var cargahora = request.body.curso.cargahora;
-            var categoria = request.body.curso.categoria;
-
-            if(descricao.trim().length == 0 || cargahora == 'undefined'
-                || categoria.trim().length == 0) {
-                response.redirect('/cadCursos');
-            }
-            else {
-                var curso = request.body.curso;
-                Curso.create(curso, function (erro, curso) {
-                    if (erro) {
-                        response.redirect('/cadCursos');
-                    } else {
-                        response.redirect('/menu');
-                    }
-                });
-            }
         }
+     
 };
 return EventosController;
 };

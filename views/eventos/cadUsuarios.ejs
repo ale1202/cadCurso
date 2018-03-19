@@ -1,10 +1,10 @@
-!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html = "pt">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Cadastro de Usuarios</title>
-            <link rel='stylesheet' href='style.css'/>
+            <link rel='stylesheet' href='/stylesheets/style.css'/>
     </head>
     <body id="bod1">
 
@@ -17,10 +17,10 @@
         </nav>
         <hr>
         <section id="meio1">
-            <form action="/login" method="POST">
+            <form action="/cadastrarUsuario" method="POST">
    
                 <p>Nome do Usuário:</p>    
-                <input type="text" style = "width:400px" name="nomeUsuario" placeholder="Nome do Usuário">
+                <input type="text" style = "width:400px" name="usuario[nome]" placeholder="Nome do Usuário">
                 <br/><br>
                 
                 <p>Senha:</p>    
@@ -29,7 +29,7 @@
                 
                 <p>Confirmar Senha:</p>
 	
-                <input type="password" style="height: 20px" name="usuario[confirma]" placeholder="Senha">
+                <input type="password" style="height: 20px" name="confirma" placeholder="Senha">
                 <br/><br/>
                     
                  <input type='submit' value='Confirmar Dados' style='width: 130px'>

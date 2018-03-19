@@ -19,9 +19,13 @@ module.exports = function (app) {
                 .exec(function (erro, usuario) {
                     if (erro) {
                         response.redirect('/');
-                    } else {
+                    } 
+                    if (usuario){
                         request.session.usuario = usuario;
                         response.redirect('/menu');
+                    }                  
+                    else {
+                        response.redirect('/');
                     }
                 });
         },
